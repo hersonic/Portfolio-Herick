@@ -1,0 +1,14 @@
+<header>
+    <img src="assets/images/Assinatura_gerada_Herick.png" alt="Herick Bomtorin" class="logo">
+
+    <!-- Botão hambúrguer -->
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+    <!-- Menu -->
+    <nav [class.active]="menuOpen" class="menu">
+        <a href="#home">Home</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>

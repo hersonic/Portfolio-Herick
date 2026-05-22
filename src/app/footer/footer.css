@@ -1,0 +1,43 @@
+.contato {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.contact-info {
+    margin-bottom: 15px;
+} 
+.contact-info h2 {
+    color: orange;
+    font-size: clamp(20px, 4vw, 32px);
+    margin-bottom: 10px;
+}
+.contact-info a {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contato p {
+    margin: 0;
+    font-size: clamp(14px, 2.5vw, 18px);
+    font-family: poppins, sans-serif;
+}
+
+@media (max-width: 576px) {
+    .contato {
+        padding: 15px;
+    }
+
+    .contato p {
+        font-size: clamp(12px, 2.5vw, 16px);
+    }
+
+    .contact-info h2 {
+        font-size: clamp(18px, 4vw, 28px);
+    }
+
+    .contact-info a {
+        font-size: clamp(14px, 3vw, 20px);
+    }
+}

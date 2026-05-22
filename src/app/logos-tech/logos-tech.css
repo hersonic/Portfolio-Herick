@@ -1,0 +1,48 @@
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* permite quebrar linha em telas menores */
+    gap: 30px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    justify-content: center;
+    /* centraliza em qualquer tamanho */
+}
+
+.icon {
+    width: clamp(40px, 8vw, 60px);
+    /* ajusta dinamicamente */
+    height: clamp(40px, 8vw, 60px);
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* 📱 Celular */
+@media (max-width: 576px) {
+    .logo-container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* 📲 Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+    .logo-container {
+        gap: 20px;
+        padding: 18px;
+    }
+
+    .icon {
+        width: 55px;
+        height: 55px;
+    }
+}
