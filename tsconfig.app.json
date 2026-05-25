@@ -4,9 +4,10 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": [
-      "node"
-    ]
+    "rootDir": "./src",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "ignoreDeprecations": "6.0"
   },
   "include": [
     "src/**/*.ts"
