@@ -5,9 +5,11 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "rootDir": "./src",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "ignoreDeprecations": "6.0"
+    "module": "node16",
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "src/**/*.ts"
