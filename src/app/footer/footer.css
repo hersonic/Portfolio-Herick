@@ -1,8 +1,10 @@
 .contato {
     text-align: center;
     padding: 20px;
-    background: #000000;
-    color: #ffffff;
+    background: var(--bgcolor);
+    color: var(--textcolor);
+    border-top: 1px solid var(--card-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-info {
