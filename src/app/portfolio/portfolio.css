@@ -1,8 +1,9 @@
 .projects {
-  background: #000000;
-  color: #fff;
+  background: var(--bgcolor);
+  color: var(--textcolor);
   padding: 60px 20px;
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .projects h2 {
@@ -19,18 +20,19 @@
 }
 
 .card {
-  background: #222;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 30px;
   width: 300px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(255,255,255,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .card .logo {
@@ -54,24 +56,27 @@
 
 .labels {
   font-size: 14px;
-  color: #aaa;
+  color: var(--text-muted);
   margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
 .btn {
   display: inline-block;
-  background: #fff;
-  color: #000;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-border);
   padding: 12px 20px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn:hover {
-  background: #111;
-  color: #fff;
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+  border-color: var(--btn-hover-border);
 }
 
 /* 📱 Responsivo */

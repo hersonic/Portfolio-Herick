@@ -3,18 +3,22 @@ header {
     justify-content: space-between;
     /* logo à esquerda, nav à direita */
     align-items: center;
-    background: #222;
-    color: #fff;
+    background: var(--header-bg);
+    color: var(--header-text);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 15px 40px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--header-shadow);
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo {
     width: 100px;
     height: auto;
+    filter: var(--logo-filter);
+    transition: filter 0.3s ease;
 }
 
 /* Menu desktop */
@@ -26,15 +30,15 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--header-text);
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(128, 128, 128, 0.15);
 }
 
 /* Botão hambúrguer */
@@ -43,8 +47,9 @@ nav a:hover {
     font-size: 1.8rem;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--header-text);
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 /* 📱 Celular */
@@ -56,10 +61,12 @@ nav a:hover {
         position: absolute;
         top: 70px;
         right: 20px;
-        background: #222;
+        background: var(--header-bg);
         padding: 20px;
         border-radius: 8px;
         width: 70%;
+        box-shadow: var(--header-shadow);
+        border: 1px solid var(--card-border);
     }
 
     nav.active {
@@ -90,10 +97,12 @@ nav a:hover {
         position: absolute;
         top: 70px;
         right: 20px;
-        background: #222;
+        background: var(--header-bg);
         padding: 20px;
         border-radius: 8px;
         width: 50%;
+        box-shadow: var(--header-shadow);
+        border: 1px solid var(--card-border);
     }
 
     nav.active {

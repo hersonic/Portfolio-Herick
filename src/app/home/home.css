@@ -5,8 +5,10 @@
     justify-content: center;
     min-height: 100vh;
     /* melhor que altura fixa */
-    background-color: #000;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
     padding: 40px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .home h2 {
@@ -23,12 +25,13 @@
 
 .home p {
     font-size: clamp(14px, 2.5vw, 20px);
-    color: #fff;
+    color: var(--textcolor);
     text-align: justify;
     margin-top: 20px;
     font-family: poppins, sans-serif;
     width: 70%;
     line-height: 1.6;
+    transition: color 0.3s ease;
 }
 
 .logo {
@@ -49,21 +52,22 @@
 .btn_group {
     display: inline-block;
     text-decoration: none;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
     padding: 15px 25px;
     border-radius: 55px;
-    border: 2px solid #fff;
+    border: 2px solid var(--btn-border);
     font-family: 'poppins', sans-serif;
     font-size: clamp(16px, 2.5vw, 22px);
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     text-align: center;
 }
 
 .btn_group:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    border-color: var(--btn-hover-border);
     cursor: pointer;
 }
 
@@ -71,10 +75,11 @@
     font-size: clamp(16px, 2.5vw, 20px);
     text-align: center;
     margin-top: 100px;
-    background: linear-gradient(35deg, #fdfffc, #fffc3359);
+    background: var(--experience-title-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: poppins, sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 .experience {

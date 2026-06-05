@@ -7,12 +7,56 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+:root {
+  --bgcolor: #ffffff;
+  --textcolor: #1a1a1a;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-text: #1a1a1a;
+  --header-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --card-bg: #f8f9fa;
+  --card-text: #1a1a1a;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  --btn-bg: #1a1a1a;
+  --btn-text: #ffffff;
+  --btn-border: #1a1a1a;
+  --btn-hover-bg: transparent;
+  --btn-hover-text: #1a1a1a;
+  --btn-hover-border: #1a1a1a;
+  --text-muted: #555555;
+  --logo-filter: invert(1); /* Invert white logo to black for light background */
+  --experience-title-gradient: linear-gradient(35deg, #1a1a1a, #555555);
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+body.dark-theme {
+  --bgcolor: #000000;
+  --textcolor: #f3f4f6;
+  --header-bg: rgba(17, 17, 17, 0.85);
+  --header-text: #f3f4f6;
+  --header-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  --card-bg: #121212;
+  --card-text: #f3f4f6;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
+  --btn-border: #ffffff;
+  --btn-hover-bg: transparent;
+  --btn-hover-text: #ffffff;
+  --btn-hover-border: #ffffff;
+  --text-muted: #aaaaaa;
+  --logo-filter: none; /* Keep original white logo for dark background */
+  --experience-title-gradient: linear-gradient(35deg, #fdfffc, #fffc3359);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
