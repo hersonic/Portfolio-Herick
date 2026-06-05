@@ -1,17 +1,17 @@
 .logo-container {
     display: flex;
-    flex-wrap: wrap;
-    /* permite quebrar linha em telas menores */
-    gap: 30px;
+    flex-direction: column; /* Alinha o ícone e o texto verticalmente */
+    align-items: center;    /* Centraliza o ícone e o texto */
+    gap: 12px;              /* Espaçamento entre o ícone e o nome */
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     box-shadow: var(--card-shadow);
     padding: 20px;
     border-radius: 8px;
     justify-content: center;
-    /* centraliza em qualquer tamanho */
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .icon {
     width: clamp(40px, 8vw, 60px);
@@ -24,6 +24,13 @@
     transform: scale(1.1);
 }
 
+.icon-text {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: var(--textcolor);
+}
+
 /* 📱 Celular */
 @media (max-width: 576px) {
     .logo-container {
@@ -34,6 +41,13 @@
     .icon {
         width: 45px;
         height: 45px;
+    }
+
+    .icon-text {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        color: var(--textcolor);
     }
 }
 

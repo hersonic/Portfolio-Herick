@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet} from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { Header } from "./header/header.js";
 import { Footer } from "./footer/footer.js";
 import { Home } from "./home/home.js";
