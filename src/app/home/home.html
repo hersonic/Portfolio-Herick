@@ -16,15 +16,15 @@
 
 <section class="buttons">
     <!-- Link externo estilizado como botão -->
-    <a href="https://www.linkedin.com/in/herick-bomtorin" rel="noopener noreferrer" target="_blank" class="btn_group">
+    <a href="https://www.linkedin.com/in/herick-bomtorin" (click)="trackSocial('LinkedIn', 'https://www.linkedin.com/in/herick-bomtorin')" rel="noopener noreferrer" target="_blank" class="btn_group">
         Linkedin
     </a>
 
-    <a href="https://github.com/hersonic" rel="noopener noreferrer" target="_blank" class="btn_group">
+    <a href="https://github.com/hersonic" (click)="trackSocial('GitHub', 'https://github.com/hersonic')" rel="noopener noreferrer" target="_blank" class="btn_group">
         Github
     </a>
 
-    <a href="assets/documents/CV_herick.pdf" rel="noopener noreferrer" target="_blank" class="btn_group">
+    <a href="assets/documents/CV_herick.pdf" (click)="trackDownloadCV()" rel="noopener noreferrer" target="_blank" class="btn_group">
         Download CV
     </a>
 </section>

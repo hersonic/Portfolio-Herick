@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AnalyticsService } from '../services/analytics.service.js';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.css',
 })
-export class Portfolio {}
+export class Portfolio {
+  private analyticsService = inject(AnalyticsService);
+
+  trackProject(projectName: string, projectUrl: string) {
+    this.analyticsService.trackProjectClick(projectName, projectUrl);
+  }
+}
+

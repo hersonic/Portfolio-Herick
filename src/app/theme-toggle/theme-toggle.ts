@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { AnalyticsService } from '../services/analytics.service.js';
 
 @Component({
   selector: 'app-theme-toggle',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./theme-toggle.css'],
 })
 export class ThemeToggleComponents implements OnInit {
+  private analyticsService = inject(AnalyticsService);
+
   ngOnInit() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const savedTheme = localStorage.getItem('theme');
@@ -24,7 +27,10 @@ export class ThemeToggleComponents implements OnInit {
     if (typeof document !== 'undefined' && typeof localStorage !== 'undefined') {
       document.body.classList.toggle('dark-theme');
       const isDark = document.body.classList.contains('dark-theme');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      const selectedTheme = isDark ? 'dark' : 'light';
+      localStorage.setItem('theme', selectedTheme);
+      this.analyticsService.trackThemeToggle(selectedTheme);
     }
   }
 }
+

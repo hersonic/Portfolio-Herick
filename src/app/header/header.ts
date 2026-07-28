@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ThemeToggleComponents } from '../theme-toggle/theme-toggle.js';
+import { AnalyticsService } from '../services/analytics.service.js';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,16 @@ import { ThemeToggleComponents } from '../theme-toggle/theme-toggle.js';
   styleUrls: ['./header.css'],
 })
 export class Header {
+  private analyticsService = inject(AnalyticsService);
   menuOpen = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+
+  onNavClick(sectionName: string) {
+    this.analyticsService.trackNavClick(sectionName);
+    this.menuOpen = false;
+  }
 }
+
